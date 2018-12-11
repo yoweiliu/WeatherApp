@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ This is a part of WeatherApp Project (https://github.com/h01d/WeatherApp)
+ Licensed under Apache License 2.0.
+ -->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myCoordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/a_main_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00b4ff">
+
+        <ImageView
+            android:id="@+id/a_main_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/clear" />
+
+        <TextView
+            android:id="@+id/a_main_degrees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="80sp" />
+
+        <TextView
+            android:id="@+id/a_main_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/a_main_degrees"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="17dp"
+            android:layout_toEndOf="@id/a_main_symbol"
+            android:fontFamily="sans-serif-condensed"
+            android:maxLines="1"
+            android:text="Date"
+            android:textAlignment="textEnd"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/a_main_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/a_main_date"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/a_main_symbol"
+            android:fontFamily="sans-serif-condensed"
+            android:maxLines="1"
+            android:text="Description"
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/a_main_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/a_main_degrees"
+            android:layout_marginTop="22dp"
+            android:layout_toEndOf="@+id/a_main_degrees"
+            android:fontFamily="sans-serif-condensed"
+            android:text="°C"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/a_main_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/a_main_date"
+            android:layout_below="@+id/a_main_wind"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Humidity"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/a_main_wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/a_main_date"
+            android:layout_below="@+id/a_main_description"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Wind"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/a_main_forecast_relative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/a_main_image"
+            android:background="#00aa00"
+            android:visibility="visible">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/a_main_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/a_main_update"
+                android:visibility="gone">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/a_main_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Latest Update: Never"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

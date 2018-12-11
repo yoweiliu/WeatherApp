@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ This is a part of WeatherApp Project (https://github.com/h01d/WeatherApp)
+ Licensed under Apache License 2.0.
+ -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/main_menu_search"
+        android:icon="@drawable/search_white"
+        android:title="Search"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/main_menu_location"
+        android:icon="@drawable/refresh_white"
+        android:title="Location"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/main_menu_about"
+        android:title="About" />
+</menu>
